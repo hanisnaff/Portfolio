@@ -44,3 +44,94 @@ body{background:var(--paper);color:var(--ink)}
 .footer a{color:#e9ece5}
 @media(max-width:900px){.about.wrap,.approach.wrap,.work.wrap,.toolkit.wrap,.journey.wrap,.credentials.wrap{padding-left:24px;padding-right:24px}}
 @media(max-width:640px){.about.wrap,.approach.wrap,.work.wrap,.toolkit.wrap,.journey.wrap,.credentials.wrap{padding:72px 18px 78px}.project-links{gap:14px}.project-links a{font-size:8px}}
+
+
+/* --- Visual revision: clear section rhythm, restrained contrast, editorial detail --- */
+:root{
+  --paper:#eeeee9;
+  --ink:#252724;
+  --muted:#777b73;
+  --line:rgba(37,39,36,.16);
+  --sage:#aab2a2;
+  --chalk:#f6f6f2;
+  --charcoal:#292c29;
+}
+body{background:var(--paper)}
+.header{border-color:rgba(37,39,36,.2)}
+.hero{min-height:640px;padding-top:88px;padding-bottom:88px}
+.hero-visual .portrait{background:#d8d9d3}
+.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.architecture{border:1px solid rgba(37,39,36,.16)}
+.hero-foot{border-color:rgba(37,39,36,.22)}
+/* Each chapter now has its own surface and visual identity. */
+.section{
+  position:relative;
+  isolation:isolate;
+  padding:clamp(64px,8vw,112px) clamp(24px,5vw,68px);
+  margin-top:clamp(52px,7vw,96px);
+  margin-bottom:clamp(52px,7vw,96px);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  box-shadow:0 0 0 100vmax var(--chapter-bg,var(--paper));
+  clip-path:inset(0 -100vmax);
+}
+.about{--chapter-bg:#f6f6f2}
+.approach{--chapter-bg:#292c29;color:#f1f1ec;border-color:rgba(255,255,255,.18)}
+.approach .eyebrow,.approach .approach-items small{color:#a9afa5}
+.approach .approach-items article{border-color:rgba(255,255,255,.2)}
+.approach .approach-items p{color:#b9bdb5}
+.work{--chapter-bg:#dedfd9}
+.toolkit{--chapter-bg:#f5f5f1}
+.journey{--chapter-bg:#e6e8e1}
+.credentials{--chapter-bg:#30332f;color:#f3f3ed;border-color:rgba(255,255,255,.2)}
+.credentials .eyebrow,.credentials .credential-row small{color:#b6bcb1}
+.credentials .credential-row{border-color:rgba(255,255,255,.2)}
+.section h2{letter-spacing:-.075em}
+.approach h2 em,.credentials h2 em{color:#b4bcae}
+.section-head{align-items:end}
+.section-head>p{color:var(--muted)}
+/* Project cards: more tangible surfaces and stronger hierarchy. */
+.projects{gap:clamp(30px,4vw,56px)}
+.project{background:#f4f4ef;padding:14px;border:1px solid rgba(37,39,36,.12);box-shadow:0 12px 32px rgba(37,39,36,.045)}
+.project .art{min-height:310px;border:1px solid rgba(37,39,36,.12);overflow:hidden}
+.project.wide .art{min-height:360px}
+.project-info{padding:22px 10px 8px}
+.project-info h3{letter-spacing:-.045em}
+.project-info p{max-width:48ch;color:#696e65}
+.tags{padding:14px 10px 10px;border-top:1px solid var(--line);color:#747970}
+.project-links{padding:12px 10px 8px;display:flex;gap:24px;flex-wrap:wrap}
+.project-links a,.text-link{font-size:11px;letter-spacing:.04em}
+.project-links a{color:#343832;text-decoration:none;border-bottom:1px solid #9ca395;padding-bottom:4px}
+.project-links a:hover,.text-link:hover{color:#737f6b}
+.lumora{background:#dfe4dc!important;color:#29332b!important}
+.daigaku{background:#e5e3dc!important;color:#33342f!important}
+.snake{background:#d8ddd5!important;color:#30372f!important}
+.tic{background:#e4e2dc!important;color:#333!important}
+.dungeon{background:#d9ddd6!important;color:#30372f!important}
+.orbit{background:radial-gradient(circle at 50% 48%,#f5f5ef 0 20%,#c9d1c6 20.2% 20.7%,#dfe4dc 20.9% 100%)}
+.window{background:#f3f3ee!important;border-color:#c7cbc2!important}
+.window aside{background:#d9ddd5!important}
+.snake-board{background:#30372f!important}
+.tic-grid{border-color:#8b9387!important}
+.dungeon-art{background:#30372f!important}
+.tool-list>div{border-color:var(--line)}
+.tool-list>div p{color:#30342f}
+.note{color:#777b73}
+.journey-row{border-color:var(--line)}
+.contact{background:#292c29;color:#f3f3ed;padding:clamp(64px,9vw,120px) max(48px,calc((100vw - 1184px)/2))}
+.contact .eyebrow,.contact-top small{color:#b5bcb0}
+.contact h2 em{color:#b5bcb0}
+.contact-bottom{border-color:rgba(255,255,255,.22)}
+.contact-bottom p{color:#c2c6be}
+.contact-bottom a{color:#f3f3ed;border-color:rgba(255,255,255,.35)}
+.footer{padding-top:28px;padding-bottom:28px}
+@media(max-width:700px){
+  .wrap,.header{width:calc(100% - 40px)}
+  .hero{min-height:unset;padding-top:54px;padding-bottom:64px;gap:42px}
+  .hero-visual{min-height:390px}
+  .section{padding:58px 22px;margin-top:44px;margin-bottom:44px}
+  .project,.project.wide{padding:9px}
+  .project .art,.project.wide .art{min-height:270px}
+  .contact{padding:64px 22px}
+  .contact-bottom{gap:28px}
+}
