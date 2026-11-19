@@ -32,7 +32,7 @@ npx serve .
 - `index.html` — page content and semantic structure
 - `styles.css` — responsive layout, typography and visual system
 - `script.js` — navigation and interaction behaviour
-- `assets/portrait.jpg` — profile image
+- Portrait image — embedded as an optimized WebP data URI in `index.html` so it loads without a separate asset request
 
 ## Contact and profiles
 
