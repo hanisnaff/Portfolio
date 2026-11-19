@@ -8,3 +8,39 @@ body{background:var(--paper);color:var(--ink)}.grain{display:none}.wrap,.header{
 .contact{background:#e5e6e2;color:#242522;border-top:1px solid var(--line)}.contact:after{display:none}.contact-top .eyebrow,.contact-top>small,.contact-bottom p{color:#777a75}.contact h2 em{color:#858782}.contact-bottom a{color:#242522;border-color:#aeb0aa}.footer{border-top:1px solid var(--line)}
 .approach{padding:105px 0 120px}.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:10%}.approach-grid>h2{font-size:clamp(48px,6vw,78px);line-height:1.02;letter-spacing:-.075em;font-weight:500;margin:0}.approach-grid>h2 em{color:#858782}.approach-items article{display:grid;grid-template-columns:42px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}.approach-items article>small{font:8px var(--mono);color:#858782;padding-top:6px}.approach-items h3{font-size:17px;font-weight:600;margin:0 0 5px;letter-spacing:-.04em}.approach-items p{font-size:11px;line-height:1.8;color:#747771;margin:0;max-width:390px}
 @media(max-width:900px){.wrap,.header{width:calc(100% - 48px)}}@media(max-width:640px){.wrap,.header{width:calc(100% - 36px)}.hero{padding-top:46px}.hero h1{font-size:clamp(64px,16vw,96px)}.hero-visual{min-height:365px}.architecture{inset:18px 0 25px 12%}.portrait{left:2%;top:9%;width:61%;height:80%}.approach{padding:75px 0 85px}.approach-grid{grid-template-columns:1fr;gap:28px}.approach-grid>h2{font-size:clamp(46px,12vw,66px)}.contact{padding:42px 20px 48px}}
+
+/* Section contrast pass: editorial grayscale with a restrained mineral accent */
+:root{--paper:#f3f3f0;--ink:#252723;--muted:#777b74;--line:#d4d6cf;--sage:#dfe3da;--stone:#e7e5df;--dark:#252925;--dark-muted:#b9beb5}
+body{background:var(--paper);color:var(--ink)}
+.about.wrap{width:100%;max-width:none;margin:0;padding:100px max(52px,calc((100% - 1240px)/2)) 112px;background:var(--stone);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.approach.wrap{width:100%;max-width:none;margin:0;padding:100px max(52px,calc((100% - 1240px)/2)) 112px;background:#f7f7f4;border-bottom:1px solid var(--line)}
+.work.wrap{width:100%;max-width:none;margin:0;padding:100px max(52px,calc((100% - 1240px)/2)) 108px;background:var(--dark);color:#f1f2ed;border-top:1px solid #343a33;border-bottom:1px solid #343a33}
+.work .eyebrow,.work .section-head>p,.work .project-info p,.work .tags{color:var(--dark-muted)}
+.work .section-head h2 em{color:#aeb6a9}
+.work .project-info h3{color:#f3f4ef}
+.work .project-info>div>small{color:#aeb6a9}
+.work .art{border:1px solid #ffffff20}
+.work .art.lumora{background:#dfe3da}
+.work .art.daigaku{background:#e6e4dd}
+.work .art.snake{background:#dce2d8}
+.work .art.tic{background:#e4e2dc}
+.work .art.dungeon{background:#d9ddd5}
+.work .arrow{border-color:#697067;color:#f3f4ef}
+.work .arrow:hover{background:#f3f4ef;color:#252925}
+.work .all-work .text-link{color:#f3f4ef;border-color:#697067}
+.work .project{border-color:#414840}
+.project-links{display:flex;gap:20px;flex-wrap:wrap;padding:12px 0 4px}
+.project-links a{font:9px var(--mono);letter-spacing:.08em;color:#cbd1c6;text-decoration:none;border-bottom:1px solid #737d70;padding-bottom:5px;transition:color .2s,border-color .2s}
+.project-links a:hover{color:#fff;border-color:#fff}
+.toolkit.wrap{width:100%;max-width:none;margin:0;padding:100px max(52px,calc((100% - 1240px)/2)) 108px;background:var(--sage);border-bottom:1px solid var(--line)}
+.toolkit .tool-list p span{background:#f7f7f3;border-color:#cbd0c7;color:#3f453e}
+.journey.wrap{width:100%;max-width:none;margin:0;padding:88px max(52px,calc((100% - 1240px)/2));background:#eeefeb;border-bottom:1px solid var(--line)}
+.credentials.wrap{width:100%;max-width:none;margin:0;padding:88px max(52px,calc((100% - 1240px)/2));background:#f7f7f4;border-bottom:1px solid var(--line)}
+.contact{background:#d7dbd2;color:#252925}
+.contact-top .eyebrow,.contact-top>small,.contact-bottom p{color:#62695f}
+.contact h2 em{color:#6e766b}
+.contact-bottom a{color:#252925;border-color:#aab1a5}
+.footer{background:#252925;color:#e9ece5;border-color:#414840}
+.footer a{color:#e9ece5}
+@media(max-width:900px){.about.wrap,.approach.wrap,.work.wrap,.toolkit.wrap,.journey.wrap,.credentials.wrap{padding-left:24px;padding-right:24px}}
+@media(max-width:640px){.about.wrap,.approach.wrap,.work.wrap,.toolkit.wrap,.journey.wrap,.credentials.wrap{padding:72px 18px 78px}.project-links{gap:14px}.project-links a{font-size:8px}}
